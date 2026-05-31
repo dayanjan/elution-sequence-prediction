@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software or the trained models, please cite the associated preprint."
+title: "Autoregressive Elution Sequence Prediction for Untargeted LC-MS Lipidomics"
+authors:
+  - family-names: "Wijesinghe"
+    given-names: "Dayanjan S."
+    orcid: "https://orcid.org/0000-0002-2124-5109"
+    affiliation: "Virginia Commonwealth University"
+license: MIT
+repository-code: "https://github.com/dayanjan/elution-sequence-prediction"
+type: software
+preferred-citation:
+  type: article
+  title: "Autoregressive Elution Sequence Prediction for Untargeted LC-MS Lipidomics"
+  authors:
+    - family-names: "Wijesinghe"
+      given-names: "Dayanjan S."
+      orcid: "https://orcid.org/0000-0002-2124-5109"
+  year: 2026
+  notes: "Preprint. arXiv identifier to be assigned on posting."
