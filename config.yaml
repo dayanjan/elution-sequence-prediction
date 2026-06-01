@@ -80,7 +80,7 @@ models:
     embedding_dim: 64
     num_heads: 4
     ff_dim: 256
-    num_layers: 4
+    num_layers: 2                      # Matches src/config.py (authoritative); 2-layer causal Transformer
     dropout: 0.1
     context_length: 64                 # Number of prior tokens to attend to
 

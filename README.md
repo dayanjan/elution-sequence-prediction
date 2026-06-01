@@ -45,7 +45,7 @@ Training data: 15,242 consensus features from four clinical lipidomics cohorts
 .
 ├── src/                 # Core library (preprocessing, tokenization, datasets, models, training)
 ├── scripts/             # Phase scripts (baselines, training, ablation, transfer learning)
-├── notebooks/           # Colab notebooks (GPU training + transfer-learning recovery)
+├── notebooks/           # Colab notebooks for all 9 analysis phases (training, ablation, validation, transfer learning)
 ├── models/              # Trained checkpoints (LSTM, Transformer, ablation variants)
 ├── outputs/             # Metrics (JSON), result summaries, and analysis figures
 ├── manuscript/
@@ -74,9 +74,10 @@ pip install -r requirements.txt
 python scripts/<phase_script>.py
 ```
 
-All randomness is seeded (`random_seed: 42` in `config.yaml`). GPU training and
-the transfer-learning recovery experiment are provided as Colab notebooks under
-`notebooks/` (verified on NVIDIA T4 / L4 / A100).
+All randomness is seeded (`random_seed: 42` in `config.yaml`). The full analysis
+pipeline — model training, dark-lipidome annotation, cross-platform RT, acquisition
+simulation, ablation, external validation, and the transfer-learning recovery —
+is provided as Colab notebooks under `notebooks/` (verified on NVIDIA T4 / L4 / A100).
 
 ---
 

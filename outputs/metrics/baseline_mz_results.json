@@ -1,0 +1,92 @@
+{
+  "random": {
+    "baseline": "random",
+    "n": 186052,
+    "top1_accuracy": 0.015248425171457441,
+    "mae_da": 280.0520822135747,
+    "top3_accuracy": 0.07948853008836239,
+    "top5_accuracy": 0.1323178466235246,
+    "top10_accuracy": 0.2540042568744222
+  },
+  "global_frequency": {
+    "baseline": "global_frequency",
+    "n": 186052,
+    "top1_accuracy": 0.03404962053619418,
+    "mae_da": 202.89574957538753,
+    "top3_accuracy": 0.09096381656741126,
+    "top5_accuracy": 0.14332014705566185,
+    "top10_accuracy": 0.2620665190376884
+  },
+  "same_as_previous": {
+    "baseline": "same_as_previous",
+    "n": 186052,
+    "top1_accuracy": 0.231403048610066,
+    "mae_da": 119.44848751961817,
+    "top3_accuracy": 0.2635553501171715,
+    "top5_accuracy": 0.30043751209339326,
+    "top10_accuracy": 0.3892782662911444
+  },
+  "markov_order1_mz": {
+    "baseline": "markov_order1_mz",
+    "n": 186052,
+    "top1_accuracy": 0.25099434566680284,
+    "mae_da": 115.35973813772493,
+    "top3_accuracy": 0.478887622815127,
+    "top5_accuracy": 0.5826758110635736,
+    "top10_accuracy": 0.7225184357061467
+  },
+  "frequency_conditioned_current_bin": {
+    "baseline": "frequency_conditioned_current_bin",
+    "n": 186052,
+    "top1_accuracy": 0.25099434566680284,
+    "mae_da": 115.35973813772493,
+    "top3_accuracy": 0.478887622815127,
+    "top5_accuracy": 0.5826758110635736,
+    "top10_accuracy": 0.7225184357061467
+  },
+  "markov_order2_mz": {
+    "baseline": "markov_order2_mz",
+    "n": 186052,
+    "top1_accuracy": 0.47344828327564337,
+    "mae_da": 82.66576011007675,
+    "top3_accuracy": 0.7764012211639757,
+    "top5_accuracy": 0.8779373508481499,
+    "top10_accuracy": 0.9655956399286221
+  },
+  "linear_mz_extrapolation_w5": {
+    "baseline": "linear_mz_extrapolation_w5",
+    "n": 186052,
+    "top1_accuracy": 0.10698084406510008,
+    "mae_da": 161.51054543890953,
+    "top3_accuracy": 0.21711134521531614,
+    "top5_accuracy": 0.2855438264571195,
+    "top10_accuracy": 0.38934276438845056
+  },
+  "linear_mz_extrapolation_w10": {
+    "baseline": "linear_mz_extrapolation_w10",
+    "n": 186052,
+    "top1_accuracy": 0.0687603465697762,
+    "mae_da": 162.3691763592974,
+    "top3_accuracy": 0.14594844452088662,
+    "top5_accuracy": 0.2048459570442672,
+    "top10_accuracy": 0.30968223937393846
+  },
+  "joint_rt_mz_markov": {
+    "baseline": "joint_rt_mz_markov",
+    "n": 186052,
+    "top1_accuracy": 0.5680132436093135,
+    "mae_da": 67.77282695160493,
+    "top3_accuracy": 0.9029411132371595,
+    "top5_accuracy": 0.9791348655214671,
+    "top10_accuracy": 0.9997258830864489
+  },
+  "rt_only_oracle": {
+    "baseline": "rt_only_oracle",
+    "n": 186052,
+    "top1_accuracy": 0.1406918495904371,
+    "mae_da": 170.5095349687184,
+    "top3_accuracy": 0.31045621654161204,
+    "top5_accuracy": 0.4316320168555028,
+    "top10_accuracy": 0.6351020144905726
+  }
+}
