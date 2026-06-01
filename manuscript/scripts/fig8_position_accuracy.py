@@ -10,8 +10,11 @@ from pathlib import Path
 
 # Paths
 FIGURES_DIR = Path(__file__).resolve().parent.parent / "figures"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+# Prefer the repo-local copy (committed for reproducibility); fall back to Drive.
+_REPO_CSV = REPO_ROOT / "outputs" / "acquisition_simulation" / "lstm_position_accuracy.csv"
 GDRIVE = Path("H:/My Drive/0000 Fun with coding/088 Lights-Out R01 Grant/Specific Aim 1/poc3_elution_sequence")
-POS_CSV = GDRIVE / "06_acquisition_simulation" / "outputs" / "lstm_position_accuracy.csv"
+POS_CSV = _REPO_CSV if _REPO_CSV.exists() else GDRIVE / "06_acquisition_simulation" / "outputs" / "lstm_position_accuracy.csv"
 OUTPUT = FIGURES_DIR / "fig8_position_accuracy.pdf"
 
 # Load position accuracy data (large file — sample_idx, pos, rt_seconds, rt_fraction, pred_mz, actual_mz, correct)

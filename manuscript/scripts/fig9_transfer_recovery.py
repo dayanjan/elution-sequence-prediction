@@ -4,8 +4,9 @@ Single panel: held-out top-1 accuracy vs number of QC calibration injections N,
 for full fine-tune / head-only fine-tune / Markov-only (all evaluated on the
 strictly held-out ANALYTICAL samples), with the 2.6% zero-shot floor (dashed) and
 98.4% within-method ceiling (dotted). A separate vermillion star marks the 99.6%
-held-out-QC accuracy at N=15 (a DIFFERENT evaluation set), showing the
-representation-diversity gap between QC and analytical recovery.
+held-out-QC accuracy at N=10 (a DIFFERENT evaluation set; the largest N whose QC
+validation is a genuine held-out QC injection), showing the representation-diversity
+gap between QC and analytical recovery.
 
 Data source: outputs/phase9_transfer/phase9_gpu_results.json (the GPU run that
 reproduces manuscript Table 6).
@@ -58,7 +59,7 @@ def series(method):
 full = series("full_finetune")
 head = series("fine_tune_head")
 markov = series("markov_only")
-qc_n15 = next(r for r in R["full_finetune"] if r["N"] == 15)["heldout_qc_top1"] * 100  # 99.6%
+qc_n10 = next(r for r in R["full_finetune"] if r["N"] == 10)["heldout_qc_top1"] * 100  # 99.6% (genuine held-out QC sample)
 
 x = np.arange(len(N_VALUES))   # categorical: equal spacing for 1,2,5,10,15
 
@@ -85,11 +86,13 @@ for xi, v in zip(x, full):
     ax.annotate(f"{v:.0f}%", (xi, v), textcoords="offset points", xytext=(0, 9),
                 ha="center", fontsize=FS_SMALL, fontweight="bold", color=BLUE)
 
-# 99.6% held-out QC callout at N=15 (vermillion: a DIFFERENT eval set from the
-# blue analytical curve — distinct color so it cannot read as the curve terminus)
-ax.plot(x[-1], qc_n15, marker="*", color=VERMILLION, markersize=16,
+# 99.6% held-out QC callout at N=10 (vermillion: a DIFFERENT eval set from the
+# blue analytical curve — distinct color so it cannot read as the curve terminus).
+# Plotted at N=10, the largest N whose QC validation is a genuine held-out QC
+# injection (held_out_qc_sample); at N=15 all 15 QC are used for training.
+ax.plot(x[3], qc_n10, marker="*", color=VERMILLION, markersize=16,
         markeredgecolor="white", markeredgewidth=0.8, zorder=5)
-ax.annotate(f"Held-out QC: {qc_n15:.1f}%", (x[-1], qc_n15),
+ax.annotate(f"Held-out QC: {qc_n10:.1f}%", (x[3], qc_n10),
             textcoords="offset points", xytext=(-12, 8), ha="right", va="bottom",
             fontsize=FS_SMALL, color=VERMILLION, fontweight="bold")
 

@@ -28,7 +28,7 @@ transformer_test = results["transformer"]["test_metrics"]
 
 # Baseline results (from manuscript Table 1)
 baselines = {
-    "Random": 1.1,
+    "Random": 1.5,
     "Global\nfrequency": 3.4,
     "Same-as-\nprevious": 23.1,
     "Markov\norder-1": 25.1,

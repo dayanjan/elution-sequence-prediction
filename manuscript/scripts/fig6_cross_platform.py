@@ -102,7 +102,7 @@ gsC = gs[2].subgridspec(2, 1, height_ratios=[1, 2.4], hspace=0.10)
 ax_hi = fig.add_subplot(gsC[0]); ax_lo = fig.add_subplot(gsC[1])
 labels = ["Random", "LSTM", "Transformer", "LSTM"]
 sub = ["", "ST003514", "ST003514", "training"]
-accs = [1.1, 5.1, 3.1, 98.4]
+accs = [1.5, 5.1, 3.1, 98.4]
 colors = [GREY, VERMILLION, VERMILLION, BLUE]
 for ax in (ax_hi, ax_lo):
     ax.bar(range(4), accs, color=colors, edgecolor="white", width=0.64)
