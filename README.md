@@ -27,8 +27,8 @@ defect, retention-time gap, ionization polarity, intensity rank).
 
 | Result | Value |
 |---|---|
-| LSTM next-bin accuracy | **98.4% top-1** (99.97% top-5; MAE = 3 Da) |
-| Transformer next-bin accuracy | 98.1% top-1 (99.97% top-5; MAE = 4 Da) |
+| LSTM next-bin accuracy | **98.4% top-1** (99.99% top-5; MAE = 3.6 Da) |
+| Transformer next-bin accuracy | 98.0% top-1 (99.88% top-5; MAE = 4 Da) |
 | Ablation: autoregressive sequence context | **+55.5 pp** (no single input feature > 0.2 pp) |
 | Cross-platform validation (same chromatography) | retention-time *r* = 0.999 |
 | Cross-condition transfer (zero-shot, different polarity) | 2.6% top-1 (catastrophic) |

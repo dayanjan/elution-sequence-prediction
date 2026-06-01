@@ -22,7 +22,7 @@ using the study IDs above.
 
 The model was trained on 15,242 consensus features from four clinical lipidomics
 cohorts (342 human plasma samples; SCIEX TripleTOF 6600+; Waters CSH C18):
-heart failure (REDHART 2), cardiac arrest, GVHD, and PCOS.
+heart failure (REDHART 1), cardiac arrest, GVHD, and PCOS.
 
 These feature tables derive from banked human plasma and contain protected
 information. They are **available from the corresponding author on reasonable

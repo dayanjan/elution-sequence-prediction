@@ -37,7 +37,7 @@ fig, axes = plt.subplots(1, 2, figsize=(13, 5), gridspec_kw={"width_ratios": [1,
 ax = axes[0]
 
 stages = ["Total\nfeatures", "Unannotated", "In m/z\nrange", "Annotated\n(dual filter)"]
-values = [15242, 13264, 4700, 168]
+values = [15242, 13266, 4700, 168]
 colors = ["#4e79a7", "#59a14f", "#f28e2b", "#e15759"]
 
 bars = ax.barh(range(len(stages) - 1, -1, -1), values, color=colors, height=0.6, edgecolor="white")
@@ -52,11 +52,11 @@ for bar, val in zip(bars, values):
             f"{val:,}", ha="left", va="center", fontsize=10, fontweight="bold")
 
 # Add percentage annotations
-ax.annotate("87%", xy=(13264, 2.3), fontsize=9, color="#666666", ha="center")
+ax.annotate("87%", xy=(13266, 2.3), fontsize=9, color="#666666", ha="center")
 ax.annotate("35%", xy=(4700, 1.3), fontsize=9, color="#666666", ha="center")
 ax.annotate("3.6%", xy=(168, 0.3), fontsize=9, color="#666666", ha="center")
 
-ax.set_title("(A) Filtering funnel", fontsize=12, fontweight="bold", loc="left")
+ax.set_title("A   Filtering funnel", fontsize=12, fontweight="bold", loc="left")
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
@@ -100,12 +100,12 @@ else:
             color="#e15759", linewidth=2, markersize=8)
     ax.set_xlabel("RT tolerance (s)", fontsize=11)
     ax.set_ylabel("Unique annotations", fontsize=11)
-    ax.set_title("(B) Threshold sensitivity", fontsize=12, fontweight="bold", loc="left")
+    ax.set_title("B   Threshold sensitivity", fontsize=12, fontweight="bold", loc="left")
 
 if has_scatter_data or has_candidate_data:
     ax.set_xlabel("Retention time (min)", fontsize=11)
     ax.set_ylabel("m/z", fontsize=11)
-    ax.set_title("(B) Recovered annotations in m/z-RT space", fontsize=12,
+    ax.set_title("B   Recovered annotations in m/z-RT space", fontsize=12,
                  fontweight="bold", loc="left")
 
 ax.spines["top"].set_visible(False)

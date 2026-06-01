@@ -42,7 +42,7 @@ ax.set_xlabel("N QC injections", fontsize=10)
 ax.set_ylabel("Top-1 Accuracy (%)", fontsize=10)
 ax.set_ylim(98.39, 98.43)
 ax.legend(fontsize=8)
-ax.set_title("(A) Dose-response", fontsize=11, fontweight="bold", loc="left")
+ax.set_title("A   Dose-response", fontsize=11, fontweight="bold", loc="left")
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
@@ -68,7 +68,7 @@ for bar, val in zip(bars, values):
     ax.text(bar.get_x() + bar.get_width() / 2, val + 0.002,
             f"{val:.3f}%", ha="center", va="bottom", fontsize=8)
 
-ax.set_title("(B) Conditioning modes", fontsize=11, fontweight="bold", loc="left")
+ax.set_title("B   Conditioning modes", fontsize=11, fontweight="bold", loc="left")
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
@@ -93,7 +93,7 @@ for bar, val in zip(bars, ctrl_vals):
     ax.text(bar.get_x() + bar.get_width() / 2, val + 0.002,
             f"{val:.3f}%", ha="center", va="bottom", fontsize=8)
 
-ax.set_title("(C) Control conditions", fontsize=11, fontweight="bold", loc="left")
+ax.set_title("C   Control conditions", fontsize=11, fontweight="bold", loc="left")
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
@@ -104,7 +104,7 @@ ax.bar(doses, deltas, color="#2ca02c", edgecolor="white", width=1.5, alpha=0.7)
 ax.axhline(0, color="black", linewidth=0.5)
 ax.set_xlabel("N QC injections", fontsize=10)
 ax.set_ylabel("Delta (carry - cold) (%)", fontsize=10)
-ax.set_title("(D) Carry-hidden benefit", fontsize=11, fontweight="bold", loc="left")
+ax.set_title("D   Carry-hidden benefit", fontsize=11, fontweight="bold", loc="left")
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 

@@ -61,7 +61,7 @@ for bar, val in zip(bars, values):
         ax_a.text(val + 1, bar.get_y() + bar.get_height() / 2,
                   f"{val:.1f}%", ha="left", va="center", fontsize=9)
 
-ax_a.set_title("(A)", fontsize=13, fontweight="bold", loc="left")
+ax_a.set_title("A", fontsize=13, fontweight="bold", loc="left")
 ax_a.spines["top"].set_visible(False)
 ax_a.spines["right"].set_visible(False)
 
@@ -79,7 +79,7 @@ ax_b.set_xlabel("Epoch", fontsize=11)
 ax_b.set_ylabel("Validation Top-1 Accuracy (%)", fontsize=11)
 ax_b.set_ylim(90, 100)
 ax_b.legend(fontsize=9, loc="lower right")
-ax_b.set_title("(B)", fontsize=13, fontweight="bold", loc="left")
+ax_b.set_title("B", fontsize=13, fontweight="bold", loc="left")
 ax_b.spines["top"].set_visible(False)
 ax_b.spines["right"].set_visible(False)
 
@@ -98,7 +98,7 @@ ax_c = fig.add_subplot(gs[2])
 annotation_gap = mpimg.imread(ASSETS_DIR / "annotation_gap.png")
 ax_c.imshow(annotation_gap)
 ax_c.axis("off")
-ax_c.set_title("(C)", fontsize=13, fontweight="bold", loc="left")
+ax_c.set_title("C", fontsize=13, fontweight="bold", loc="left")
 
 fig.savefig(OUTPUT, dpi=300, bbox_inches="tight")
 fig.savefig(OUTPUT.with_suffix(".png"), dpi=300, bbox_inches="tight")

@@ -5,7 +5,7 @@ Handles column name differences across datasets:
 - Cardiac Arrest: 'Annotation', separate pos/neg sheets, no 'ESI mode' column
 - GVHD: 'Annotation', combined sheet, has 'ESI mode'
 - PCOS: 'Annotation', combined sheet, has 'ESI mode'
-- REDHART 2: 'Metabolite name' (not 'Annotation'), combined sheet, has 'ESI mode'
+- REDHART 1: 'Metabolite name' (not 'Annotation'), combined sheet, has 'ESI mode'
 
 Output columns:
   study, sample_id, sample_type, polarity, feature_id, annotation, inchi_key,

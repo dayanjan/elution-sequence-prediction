@@ -1,26 +1,41 @@
 """Annotation gap visualization across 4 clinical lipidomics cohorts."""
-import sys
-sys.path.insert(0, "src")
-
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import numpy as np
-from preprocessing import load_all_datasets
+import pandas as pd
+
+# Canonical source = the tokenized / model-input feature table (the single source
+# of truth shared with the manuscript: 15,242 features, 1,976 annotated). The raw
+# pre-tokenization load counts 2 extra annotated features (-> 1,978), which would
+# disagree with the manuscript text and Fig 7.
+CANONICAL_PARQUET = "data/sequences/tokenized_features.parquet"
+
+
+def _is_annotated(s):
+    # .notna() is Arrow-NA-aware (astype(str) on Arrow NA yields "<NA>", not "" or
+    # "nan", so keep the notna() guard); also drop empty and literal "nan" strings.
+    stripped = s.astype(str).str.strip()
+    return s.notna() & stripped.ne("") & stripped.str.lower().ne("nan")
+
 
 def make_annotation_gap_figure(output_path="outputs/figures/annotation_gap.png"):
-    df = load_all_datasets()
+    df = pd.read_parquet(CANONICAL_PARQUET)
+    # One representative row per feature (annotation is a feature-level property;
+    # the parquet repeats it across samples). First-row dedup reproduces the
+    # manuscript's canonical 1,976 annotated of 15,242.
+    df = df.drop_duplicates(["study", "feature_id"])
 
     # Compute per-study stats
     studies = []
     for study, g in df.groupby("study"):
         total = g["feature_id"].nunique()
-        annotated = g[g["annotation"].notna() & (g["annotation"] != "")]["feature_id"].nunique()
+        annotated = g[_is_annotated(g["annotation"])]["feature_id"].nunique()
         unannotated = total - annotated
         nice_name = {
             "cardiac_arrest": "Cardiac\nArrest",
             "gvhd": "GVHD",
             "pcos": "PCOS",
-            "redhart2": "REDHART 2",
+            "redhart2": "REDHART 1",
         }.get(study, study)
         studies.append({
             "name": nice_name, "total": total,

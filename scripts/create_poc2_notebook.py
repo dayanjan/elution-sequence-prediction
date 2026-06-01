@@ -325,7 +325,7 @@ for idx, test_cohort in enumerate(cohorts):
     ax.plot([0, 13], [0, 13], 'k--', lw=1, alpha=0.5)
     ax.fill_between([0, 13], [-1, 12], [1, 14], alpha=0.1, color='green', label='+/-1 min')
 
-    nice = {'cardiac_arrest': 'Cardiac Arrest', 'gvhd': 'GVHD', 'pcos': 'PCOS', 'redhart2': 'REDHART 2'}
+    nice = {'cardiac_arrest': 'Cardiac Arrest', 'gvhd': 'GVHD', 'pcos': 'PCOS', 'redhart2': 'REDHART 1'}
     ax.set_title(f"{nice.get(test_cohort, test_cohort)}\\n(n={len(test)})", fontsize=10)
     ax.text(0.05, 0.95, f"MAE={mae:.2f} min\\nR2={r2:.3f}", transform=ax.transAxes,
             va='top', fontsize=9, bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
