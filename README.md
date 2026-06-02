@@ -1,8 +1,8 @@
-# Autoregressive Elution Sequence Prediction for Untargeted LC-MS Lipidomics
+# The Language of Elution: Autoregressive Prediction of the Next Feature in Untargeted LC-HRMS Lipidomics
 
 Code, trained model checkpoints, and reproducibility materials for the preprint:
 
-> **Autoregressive Elution Sequence Prediction for Untargeted LC-MS Lipidomics.**
+> **The Language of Elution: Autoregressive Prediction of the Next Feature in Untargeted LC-HRMS Lipidomics.**
 > Dayanjan S. Wijesinghe. *Preprint, 2026.* (arXiv ID: _to be assigned_)
 
 ---
