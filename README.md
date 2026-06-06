@@ -3,7 +3,7 @@
 Code, trained model checkpoints, and reproducibility materials for the preprint:
 
 > **The Language of Elution: Autoregressive Prediction of the Next Feature in Untargeted LC-HRMS Lipidomics.**
-> Dayanjan S. Wijesinghe. *Preprint, 2026.* (arXiv ID: _to be assigned_)
+> Dayanjan S. Wijesinghe. *Preprint, 2026.* [arXiv:2606.05225](https://arxiv.org/abs/2606.05225) [q-bio.QM].
 
 ---
 
@@ -103,7 +103,7 @@ agreement, consistent with the governing IRB approvals and patient-consent terms
 ## Citation
 
 If you use this code or the trained models, please cite the preprint (see
-[`CITATION.cff`](CITATION.cff)). The arXiv identifier will be added on posting.
+[`CITATION.cff`](CITATION.cff)). Preprint: [arXiv:2606.05225](https://arxiv.org/abs/2606.05225), DOI [10.48550/arXiv.2606.05225](https://doi.org/10.48550/arXiv.2606.05225).
 
 ## Contact
 
