@@ -9,6 +9,10 @@ authors:
 license: MIT
 repository-code: "https://github.com/dayanjan/elution-sequence-prediction"
 type: software
+identifiers:
+  - type: doi
+    value: "10.48550/arXiv.2606.05225"
+    description: "arXiv preprint"
 preferred-citation:
   type: article
   title: "The Language of Elution: Autoregressive Prediction of the Next Feature in Untargeted LC-HRMS Lipidomics"
@@ -17,4 +21,7 @@ preferred-citation:
       given-names: "Dayanjan S."
       orcid: "https://orcid.org/0000-0002-2124-5109"
   year: 2026
-  notes: "Preprint. arXiv identifier to be assigned on posting."
+  journal: "arXiv"
+  doi: "10.48550/arXiv.2606.05225"
+  url: "https://arxiv.org/abs/2606.05225"
+  notes: "Preprint. arXiv:2606.05225 [q-bio.QM]."
